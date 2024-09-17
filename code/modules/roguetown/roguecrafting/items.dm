@@ -20,6 +20,22 @@
 	verbage = "sews"
 	craftdiff = 0
 
+/datum/crafting_recipe/roguetown/cloth5x
+	name = "cloth 5x"
+	result = list(
+				/obj/item/natural/cloth,
+				/obj/item/natural/cloth,
+				/obj/item/natural/cloth,
+				/obj/item/natural/cloth,
+				/obj/item/natural/cloth,
+				)
+	reqs = list(/obj/item/natural/fibers = 10)
+	tools = list(/obj/item/needle)
+	skillcraft = /datum/skill/misc/sewing
+	verbage_simple = "sew"
+	verbage = "sews"
+	craftdiff = 0
+
 /datum/crafting_recipe/roguetown/clothbelt
 	name = "cloth belt"
 	result = /obj/item/storage/belt/rogue/leather/cloth
@@ -250,10 +266,10 @@
 				/obj/item/reagent_containers/glass/bowl)
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 
-// /datum/crafting_recipe/roguetown/pot
-// 	name = "stone pot"
-// 	result = /obj/item/reagent_containers/glass/pot/stone
-// 	reqs = list(/obj/item/natural/stone = 2)
+/datum/crafting_recipe/roguetown/pot
+	name = "stone pot"
+	result = /obj/item/reagent_containers/glass/bucket/pot
+	reqs = list(/obj/item/natural/stone = 2)
 
 /datum/crafting_recipe/roguetown/stonearrow
 	name = "stone arrow"
@@ -282,7 +298,16 @@
 				/obj/item/ammo_casing/caseless/rogue/arrow = 1,
 				/datum/reagent/berrypoison = 5
 				)
-	req_table = TRUE
+	req_table = FALSE
+
+/datum/crafting_recipe/roguetown/soporarrow
+	name = "soporific arrow"
+	result = /obj/item/ammo_casing/caseless/rogue/arrow/sopor
+	reqs = list(
+				/obj/item/ammo_casing/caseless/rogue/arrow = 1,
+				/datum/reagent/medicine/soporpot = 10
+				)
+	req_table = FALSE
 
 /datum/crafting_recipe/roguetown/poisonarrow_stone
 	name = "poisoned stone arrow"
@@ -291,7 +316,16 @@
 				/obj/item/ammo_casing/caseless/rogue/arrow/stone = 1,
 				/datum/reagent/berrypoison = 5
 				)
-	req_table = TRUE
+	req_table = FALSE
+
+/datum/crafting_recipe/roguetown/soporarrow_stone
+	name = "soporific stone arrow"
+	result = /obj/item/ammo_casing/caseless/rogue/arrow/stone/sopor
+	reqs = list(
+				/obj/item/ammo_casing/caseless/rogue/arrow/stone = 1,
+				/datum/reagent/medicine/soporpot = 10
+				)
+	req_table = FALSE
 
 /*
 /datum/crafting_recipe/roguetown/poisonbolt //Coded, but commented out pending balance discussion.
@@ -316,7 +350,22 @@
 				/datum/reagent/berrypoison = 25
 				)
 
-	req_table = TRUE
+	req_table = FALSE
+
+/datum/crafting_recipe/roguetown/soporarrow_three // Your symmetry is irrelevant here.
+	name = "soporific arrow (x3)"
+	result = list(
+				/obj/item/ammo_casing/caseless/rogue/arrow/sopor,
+				/obj/item/ammo_casing/caseless/rogue/arrow/sopor,
+				/obj/item/ammo_casing/caseless/rogue/arrow/sopor
+				)
+	reqs = list(
+				/obj/item/ammo_casing/caseless/rogue/arrow = 3,
+				/datum/reagent/medicine/soporpot = 30
+				)
+
+	req_table = FALSE
+
 /*
 /datum/crafting_recipe/roguetown/poisonbolt_five //Coded, but commented out pending balance discussion.
 	name = "poisoned bolts (x5)"
@@ -340,7 +389,21 @@
 				/datum/reagent/berrypoison = 25
 				)
 
-	req_table = TRUE
+	req_table = FALSE
+
+/datum/crafting_recipe/roguetown/soporarrow_3_stone
+	name = "soporific stone arrow (x3)"
+	result = list(
+				/obj/item/ammo_casing/caseless/rogue/arrow/stone/sopor,
+				/obj/item/ammo_casing/caseless/rogue/arrow/stone/sopor,
+				/obj/item/ammo_casing/caseless/rogue/arrow/stone/sopor
+				)
+	reqs = list(
+				/obj/item/ammo_casing/caseless/rogue/arrow/stone = 5,
+				/datum/reagent/medicine/soporpot = 30
+				)
+
+	req_table = FALSE
 
 /datum/crafting_recipe/roguetown/mortar
 	name = "stone mortar"
@@ -363,6 +426,21 @@
 	result = /obj/item/storage/roguebag/crafted
 	reqs = list(/obj/item/natural/fibers = 1,
 				/obj/item/natural/cloth = 1)
+	tools = list(/obj/item/needle)
+	skillcraft = /datum/skill/misc/sewing
+	req_table = FALSE
+
+/datum/crafting_recipe/roguetown/bagx5
+	name = "bag x5"
+	result = list(
+				/obj/item/storage/roguebag/crafted,
+				/obj/item/storage/roguebag/crafted,
+				/obj/item/storage/roguebag/crafted,
+				/obj/item/storage/roguebag/crafted,
+				/obj/item/storage/roguebag/crafted,
+				)
+	reqs = list(/obj/item/natural/fibers = 5,
+				/obj/item/natural/cloth = 5)
 	tools = list(/obj/item/needle)
 	skillcraft = /datum/skill/misc/sewing
 	req_table = FALSE
