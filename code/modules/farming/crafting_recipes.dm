@@ -99,3 +99,14 @@
 	verbage_simple = "roll"
 	verbage = "rolls"
 	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/structure/chickennest
+	name = "chicken nest"
+	result = /obj/structure/fluff/nest
+	reqs = list(/obj/item/grown/log/tree/stick = 1,
+				/obj/item/natural/fibers = 2)
+	time = 3 SECONDS
+	verbage_simple = "build"
+	verbage = "builds"
+	skillcraft = /datum/skill/labor/farming
+	craftdiff = 0
